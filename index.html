@@ -25,9 +25,11 @@
     body {
       margin: 0;
       padding: 0;
+      background-color: #E8E4E3;
     }
 
     #map {
+
       top: 0;
       bottom: 0;
       width: 100%;
@@ -37,6 +39,7 @@
       max-width: 400px;
       font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
     }
+
     .top-spacer {
       margin-top: 20px;
     }
@@ -78,38 +81,35 @@
     </div>
     <div class="row top-spacer">
       <div class="container table ">
-        <table data-toggle="table">
+        <table data-toggle="table" data-url="schools.json">
           <thead>
             <tr>
-              <th data-sortable="true">School</th>
-              <th>Address</th>
-              <th>Phone Number</th>
-
+              <th data-field="name" data-sortable="true">
+                Name
+              </th>
+              <th data-field="address" data-sortable="true">
+                Address
+              </th>
+              <th data-field="city" data-sortable="true">
+                City
+              </th>
+              <th data-field="state" data-sortable="true">
+                State
+              </th>
+              </th>
+              <th data-field="zip" data-sortable="true">
+                Zip
+              </th>
+              </th>
+              <th data-field="phone" data-sortable="true">
+                Phone
+              </th>
+              </th>
+              <th data-field="type" data-sortable="true">
+                Facility Type
+              </th>
             </tr>
           </thead>
-          <tbody>
-
-            <tr>
-              <td>Cornerstone Christian Academy</td>
-              <td>12368 Dillingham Square, Woodbridge, VA 22192</td>
-              <td>(703) 897-1100</td>
-            </tr>
-            <tr>
-              <td>Peabody School</td>
-              <td>425 C St NE, Washington, DC 20002</td>
-              <td>(202) 698-3277</td>
-            </tr>
-            <tr>
-              <td>Richmond Montessori School</td>
-              <td>499 N Parham Rd, Richmond, VA 23229</td>
-              <td>(804) 741-0040</td>
-            </tr>
-            <tr>
-              <td>Mountaintop Montessori</td>
-              <td>40 Pinnacle Place, Charlottesville, VA 22911</td>
-              <td>(434) 979-8886</td>
-            </tr>
-          </tbody>
         </table>
       </div>
     </div>
@@ -125,9 +125,6 @@
 
   <!-- Latest compiled and minified JavaScript -->
   <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.js"></script>
-
-  <!-- Latest compiled and minified Locales -->
-  <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/locale/bootstrap-table-zh-CN.min.js"></script>
 </body>
 <script>
   mapboxgl.accessToken = 'pk.eyJ1IjoiZG90bWlrZSIsImEiOiJjaXkwbGc3NjMwMDZ1MzNvN3o4b3ozMWx0In0.ir-YsyzBOuZ_wQVXJ-PCAw';

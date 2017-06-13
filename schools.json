@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Cornerstone Christian Academy",
+    "address": "16210 Elementary Dr.",
+    "city": "ABINGDON",
+    "state": "VA",
+    "zip": 24210,
+    "phone": 2766237164,
+    "type": "Certified Pre-School"
+  },
+  {
+    "name": "Peabody School",
+    "address": "1232 Stoney Ridge Road",
+    "city": "CHARLOTTESVILLE",
+    "state": "VA",
+    "zip": 22902,
+    "phone": 4342966901,
+    "type": "Certified Pre-School"
+  },
+  {
+    "name": "Mountaintop Montessori",
+    "address": "440 Pinnacle Place",
+    "city": "CHARLOTTESVILLE",
+    "state": "VA",
+    "zip": 22911,
+    "phone": 4349798886,
+    "type": "Certified Pre-School"
+  },
+  {
+    "name": "Blue Mountain School",
+    "address": "470 Christiansburg Pike NE",
+    "city": "FLOYD",
+    "state": "VA",
+    "zip": 24091,
+    "phone": 5407454234,
+    "type": "Certified Pre-School"
+  },
+  {
+    "name": "Richmond Montessori School",
+    "address": "499 North Parham Road",
+    "city": "HENRICO",
+    "state": "VA",
+    "zip": 23229,
+    "phone": 8047410040,
+    "type": "Certified Pre-School"
+  }
+]
