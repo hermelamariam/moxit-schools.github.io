@@ -28,7 +28,6 @@
     }
 
     #map {
-      position: absolute;
       top: 0;
       bottom: 0;
       width: 100%;
@@ -38,51 +37,97 @@
       max-width: 400px;
       font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
     }
+    .top-spacer {
+      margin-top: 20px;
+    }
   </style>
   <link rel="stylesheet" href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.css">
   <link rel="stylesheet" href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.28.0/mapbox-gl.css">
   <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.js"></script>
 </head>
 
-<div class="navbar navbar-default" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+<body>
+
+  <div class="navbar navbar-default" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">Daycares</a>
-    </div>
-    <div class="navbar-collapse collapse navbar-right">
-      <ul class="nav navbar-nav">
-        <li>
-          <a href="/">Home</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<body>
-  <div class="main-container">
-    <div class="container">
-      <div class="row">
-        <h1>Locations</h1>
-        <div class="col-md-8 col-md-offset-2">
-          <div id='map' style='width: 800px; height: 550px;'></div>
-        </div>
+        <a class="navbar-brand" href="/">Daycares</a>
+      </div>
+      <div class="navbar-collapse collapse navbar-right">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="/">Home</a>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
+
+  <div class="container">
+    <div class="row">
+      <h1>Locations</h1>
+      <div class="col-md-8 col-md-offset-2">
+        <div id='map' style='width: 800px; height: 550px;'></div>
+      </div>
+    </div>
+    <div class="row top-spacer">
+      <div class="container table ">
+        <table data-toggle="table">
+          <thead>
+            <tr>
+              <th data-sortable="true">School</th>
+              <th>Address</th>
+              <th>Phone Number</th>
+
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <td>Cornerstone Christian Academy</td>
+              <td>12368 Dillingham Square, Woodbridge, VA 22192</td>
+              <td>(703) 897-1100</td>
+            </tr>
+            <tr>
+              <td>Peabody School</td>
+              <td>425 C St NE, Washington, DC 20002</td>
+              <td>(202) 698-3277</td>
+            </tr>
+            <tr>
+              <td>Richmond Montessori School</td>
+              <td>499 N Parham Rd, Richmond, VA 23229</td>
+              <td>(804) 741-0040</td>
+            </tr>
+            <tr>
+              <td>Mountaintop Montessori</td>
+              <td>40 Pinnacle Place, Charlottesville, VA 22911</td>
+              <td>(434) 979-8886</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
+
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.css">
 
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.js"></script>
+
+  <!-- Latest compiled and minified Locales -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/locale/bootstrap-table-zh-CN.min.js"></script>
 </body>
 <script>
   mapboxgl.accessToken = 'pk.eyJ1IjoiZG90bWlrZSIsImEiOiJjaXkwbGc3NjMwMDZ1MzNvN3o4b3ozMWx0In0.ir-YsyzBOuZ_wQVXJ-PCAw';
@@ -225,7 +270,8 @@
       "layout": {
         "icon-image": "circle-15",
         "icon-allow-overlap": true,
-        "icon-size": .5, 
+        "icon-size": .5,
+
       }
     });
 
